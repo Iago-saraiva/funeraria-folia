@@ -15,6 +15,6 @@ class Order(models.Model):
     death_description = models.TextField()
     body_weight = models.FloatField()
     coffin_estimated_size = models.FloatField()
-    coffin = models.ForeignKey(Coffin, on_delete=models.CASCADE)
+    coffin = models.ForeignKey(Coffin, on_delete=models.CASCADE, blank=True, null=True)
     date = models.DateTimeField(auto_now_add=True)
     finished_order = models.BooleanField(default=False)
